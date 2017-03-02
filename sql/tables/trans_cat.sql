@@ -8,6 +8,7 @@ CREATE TABLE trans_cat (
 	updated DATETIME NULL
 );
 
+-- Categories
 INSERT INTO trans_cat (id, name, created, updated) VALUES
 (1,'Bus/Metro',NOW(),NULL),
 (2,'Café',NOW(),NULL),
@@ -17,5 +18,9 @@ INSERT INTO trans_cat (id, name, created, updated) VALUES
 (6,'Almuerzo',NOW(),NULL),
 (7,'Pos-Almuerzo',NOW(),NULL),
 (8,'Comida',NOW(),NULL),
-(9,'Pos-Comida',NOW(),NULL);
+(9,'Pos-Comida',NOW(),NULL),
+(10,'Compras Almacen',NOW(),NULL),
+(11,'Trago + Comida',NOW(),NULL),
+(12,'Cover',NOW(),NULL),
+(13,'Cine',NOW(),NULL);
 
