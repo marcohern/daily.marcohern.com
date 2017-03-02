@@ -1,4 +1,4 @@
---Trans
+-- Trans
 INSERT INTO trans (event_date, category_id, value, created) VALUES
 ('2017-02-28 06:56',1,-2400,NOW()),
 ('2017-02-28 07:36',2,-5000,NOW()),
