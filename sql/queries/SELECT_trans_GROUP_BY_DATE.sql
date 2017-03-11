@@ -1,3 +1,4 @@
+
 SELECT	DATE(t.event_date)		AS day,
         IFNULL(SUM(r.value),0)	AS transport,
         IFNULL(SUM(f.value),0)	AS food,
