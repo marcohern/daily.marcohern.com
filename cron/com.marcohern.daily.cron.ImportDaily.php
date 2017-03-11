@@ -1,7 +1,7 @@
 <?php
 //CRON ImportDaily
 
-$db = new mysqli('localhost', 'marcoher_daily','K9Q6mk,BFiwq','marcoher_daily');
+$db = new mysqli('marcohern.com', 'marcoher_daily','K9Q6mk,BFiwq','marcoher_daily');
 
 if ($db->connect_error) {
 	die("Error conecting: (" .$db->connect_errno.") ".$db->connect_error);
