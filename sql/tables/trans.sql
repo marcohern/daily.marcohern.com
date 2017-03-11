@@ -5,6 +5,8 @@ CREATE TABLE trans (
 	event_date DATETIME NOT NULL,
 	category_id INT NOT NULL,
 	value NUMERIC(20,2) NOT NULL DEFAULT 0,
+	processed ENUM('true','false') NOT NULL DEFAULT 'true',
+	group_id INT NOT NULL DEFAULT 0,
 
 	created DATETIME NOT NULL,
 	updated DATETIME NULL,

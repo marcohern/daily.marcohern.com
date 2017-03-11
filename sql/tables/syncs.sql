@@ -3,6 +3,8 @@ DROP TABLE IF EXISTS syncs;
 CREATE TABLE syncs (
 	id         BIGINT        NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	event_date DATETIME      NOT NULL,
+	processed ENUM('true','false') NOT NULL DEFAULT 'true',
+	group_id INT NOT NULL DEFAULT 0,
 
 	bank       NUMERIC(20,2) NOT NULL DEFAULT 0.0,
 	pockets    NUMERIC(20,2) NOT NULL DEFAULT 0.0,
