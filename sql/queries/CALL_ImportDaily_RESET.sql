@@ -1,4 +1,4 @@
-UPDATE trans SET processed = 'false';
+UPDATE trans SET pdaily = 'false';
 
 DELETE FROM daily;
 

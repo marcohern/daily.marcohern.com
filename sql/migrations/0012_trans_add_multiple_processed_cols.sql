@@ -1,4 +1,23 @@
 
+INSERT INTO migrations(created, group_id, description) VALUES
+(NOW(), 6, 'Instead of having a single processed column, replace it for multiple processed columsn, one per summary');
+
+ALTER TABLE trans
+ADD pdaily   ENUM('true','false') NOT NULL DEFAULT 'false' AFTER event_date,
+ADD pweekly  ENUM('true','false') NOT NULL DEFAULT 'false' AFTER pdaily,
+ADD pmonthly ENUM('true','false') NOT NULL DEFAULT 'false' AFTER pweekly,
+ADD pyearly  ENUM('true','false') NOT NULL DEFAULT 'false' AFTER pmonthly;
+
+UPDATE trans SET pdaily = 'true' WHERE processed = 'true';
+
+ALTER TABLE trans DROP processed;
+
+CREATE INDEX ix_trans_pdaily   ON trans (pdaily   ASC);
+CREATE INDEX ix_trans_pweekly  ON trans (pweekly  ASC);
+CREATE INDEX ix_trans_pmonthly ON trans (pmonthly ASC);
+CREATE INDEX ix_trans_pyearly  ON trans (pyearly  ASC);
+
+
 DROP PROCEDURE IF EXISTS ImportDaily;
 
 DELIMITER $$
