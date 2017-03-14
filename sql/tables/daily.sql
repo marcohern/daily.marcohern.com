@@ -6,13 +6,23 @@ CREATE TABLE daily(
 	processed ENUM('true','false') NOT NULL DEFAULT 'false',
 
 	transport NUMERIC(20,2) NOT NULL,
-	food NUMERIC(20,2) NOT NULL,
+	food      NUMERIC(20,2) NOT NULL,
 	purchases NUMERIC(20,2) NOT NULL,
-	sortie NUMERIC(20,2) NOT NULL,
-	others NUMERIC(20,2) NOT NULL,
+	sortie    NUMERIC(20,2) NOT NULL,
+	others    NUMERIC(20,2) NOT NULL,
 
-	total NUMERIC(20,2) NOT NULL,
+	db_transport NUMERIC(20,2) NOT NULL,
+	db_food      NUMERIC(20,2) NOT NULL,
+	db_purchases NUMERIC(20,2) NOT NULL,
+	db_sortie    NUMERIC(20,2) NOT NULL,
+	db_others    NUMERIC(20,2) NOT NULL,
+
+	cash   NUMERIC(20,2) NOT NULL,
+	debit  NUMERIC(20,2) NOT NULL,
+
+	input   NUMERIC(20,2) NOT NULL,
+	balance NUMERIC(20,2) NOT NULL,
+	output  NUMERIC(20,2) NOT NULL,
 
 	INDEX ix_daily_day (day DESC)
 );
-

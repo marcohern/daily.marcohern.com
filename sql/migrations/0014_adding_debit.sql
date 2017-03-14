@@ -1,4 +1,48 @@
 
+INSERT INTO migrations(created, group_id, description) VALUES
+(NOW(), 8, 'Adding debit card operations and distinctions');
+
+ALTER TABLE trans
+ADD mode ENUM('CASH','DEBIT') NOT NULL DEFAULT 'CASH'
+AFTER value;
+
+UPDATE trans SET mode = 'DEBIT' WHERE value > 1000;
+
+ALTER TABLE syncs
+DROP df_bank, DROP df_pockets, DROP df_storage;
+
+DROP TABLE IF EXISTS daily;
+
+CREATE TABLE daily(
+	id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	day DATE NOT NULL,
+	processed ENUM('true','false') NOT NULL DEFAULT 'false',
+
+	transport NUMERIC(20,2) NOT NULL,
+	food      NUMERIC(20,2) NOT NULL,
+	purchases NUMERIC(20,2) NOT NULL,
+	sortie    NUMERIC(20,2) NOT NULL,
+	others    NUMERIC(20,2) NOT NULL,
+
+	db_transport NUMERIC(20,2) NOT NULL,
+	db_food      NUMERIC(20,2) NOT NULL,
+	db_purchases NUMERIC(20,2) NOT NULL,
+	db_sortie    NUMERIC(20,2) NOT NULL,
+	db_others    NUMERIC(20,2) NOT NULL,
+
+	cash   NUMERIC(20,2) NOT NULL,
+	debit  NUMERIC(20,2) NOT NULL,
+
+	input   NUMERIC(20,2) NOT NULL,
+	balance NUMERIC(20,2) NOT NULL,
+	output  NUMERIC(20,2) NOT NULL,
+
+	INDEX ix_daily_day (day DESC)
+);
+
+UPDATE trans SET pdaily = 'false';
+
+
 DROP PROCEDURE IF EXISTS ImportDaily;
 
 DELIMITER $$
@@ -93,3 +137,6 @@ BEGIN
 END$$
 
 DELIMITER ;
+
+CALL ImportDaily();
+
