@@ -24,5 +24,9 @@ CREATE TABLE daily(
 	balance NUMERIC(20,2) NOT NULL,
 	output  NUMERIC(20,2) NOT NULL,
 
+	created DATETIME NOT NULL DEFAULT '2000-01-01 00:00:00',
+	updated DATETIME NULL,
+
 	INDEX ix_daily_day (day DESC)
 );
+

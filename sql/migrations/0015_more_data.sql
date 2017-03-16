@@ -1,4 +1,39 @@
 
+INSERT INTO migrations(created, group_id, description) VALUES
+(NOW(), 9, 'More data');
+
+-- Categories
+INSERT INTO trans_cat (id, name, group_id, hypercat, created, updated) VALUES
+(25,'Pago Movil',9,'PURCHASES',NOW(),NULL);
+
+-- Trans
+INSERT INTO trans (event_date, value, group_id, category_id, created) VALUES
+('2017-03-13 23:46:19',-80900,9,25,NOW()),
+('2017-03-14 08:00:00',-2450,9,1,NOW()),
+('2017-03-14 08:30:00',-1300,9,2,NOW()),
+('2017-03-14 13:58:55',-22000,9,6,NOW()),
+('2017-03-14 18:52:16',-2000,9,1,NOW()),
+('2017-03-15 07:15:00',-2400,9,1,NOW()),
+('2017-03-15 07:54:00',-2700,9,4,NOW()),
+('2017-03-15 13:12:24',-9500,9,6,NOW()),
+('2017-03-15 17:03:36',-2000,9,1,NOW()),
+('2017-03-15 18:21:42',-10500,9,8,NOW()),
+('2017-03-15 18:52:36',-800,9,18,NOW());
+
+-- Syncs
+INSERT INTO syncs (event_date, group_id, processed, bank, pockets, storage, pr_bank, pr_pockets, pr_storage, created) VALUES
+('2017-03-14 21:10:00',9,'false',2369535.31,68100,0,2451259.22,101150,0,NOW()),
+('2017-03-15 19:35:00',9,'false',2361619.8,40200,0,2369535.31,68100,0,NOW());
+
+CALL ImportDaily;
+
+ALTER TABLE daily
+ADD created DATETIME NOT NULL DEFAULT '2000-01-01 00:00:00',
+ADD updated DATETIME NULL;
+
+UPDATE daily SET created = NOW();
+
+
 DROP PROCEDURE IF EXISTS ImportDaily;
 
 DELIMITER $$
