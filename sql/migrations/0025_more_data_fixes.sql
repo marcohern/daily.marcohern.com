@@ -5,7 +5,7 @@ INSERT INTO migrations(created, group_id, description) VALUES
 UPDATE trans 
 SET event_date = '2017-03-26' 
   , updated = NOW()
-WHERE YEAR(event_date) = 2251 AND YEAR(event_date) = 2134;
+WHERE YEAR(event_date) = 2251 OR YEAR(event_date) = 2134;
 
 -- Categories
 INSERT INTO trans_cat (id, name, group_id, hypercat, created, updated) VALUES
