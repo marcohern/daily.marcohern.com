@@ -16,3 +16,5 @@ INSERT INTO trans (event_date, value, mode, group_id, category_id, created) VALU
 INSERT INTO syncs (event_date, group_id, processed, bank, pockets, storage, pr_bank, pr_pockets, pr_storage, created) VALUES
 ('2017-04-04 06:37:00',29,'false',6035866.74,36500,0,6035784.09,138500,0,NOW());
 
+CALL ImportDaily();
+
