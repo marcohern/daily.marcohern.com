@@ -29,3 +29,10 @@ INSERT INTO syncs (event_date, group_id, processed, bank, pockets, storage, pr_b
 ('2017-04-05 09:25:00',30,'false',5717714.8,287700,0,6035866.74,36500,0,NOW()),
 ('2017-04-05 22:37:00',30,'false',5717714.8,254500,0,5717714.8,287700,0,NOW());
 
+UPDATE trans SET value = -value WHERE event_date = '2017-04-05 17:42:00';
+
+-- Trans
+INSERT INTO trans (event_date, value, mode, group_id, category_id, created) VALUES
+('2017-04-06 19:00:00',-3600,'CASH',30,7,NOW());
+
+
