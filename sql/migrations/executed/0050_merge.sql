@@ -1316,3 +1316,208 @@ INSERT INTO trans (event_date, value, mode, group_id, category_id, created) VALU
 INSERT INTO syncs (event_date, group_id, processed, bank, pockets, storage, pr_bank, pr_pockets, pr_storage, created) VALUES
 ('2017-04-24 21:31:01',40,'false',4368226.38,111100,0,4478076.52,43000,0,NOW());
 
+
+INSERT INTO migrations(created, group_id, description) VALUES
+(NOW(),41, 'more data');
+
+-- Trans
+INSERT INTO trans (event_date, value, mode, group_id, category_id, created) VALUES
+('2017-04-25 07:57:00',-2400,'CASH',41,1,NOW()),
+('2017-04-25 08:38:00',-2000,'CASH',41,4,NOW()),
+('2017-04-25 14:34:46',-14800,'CASH',41,6,NOW()),
+('2017-04-25 18:54:00',-2400,'CASH',41,1,NOW());
+
+-- Syncs
+INSERT INTO syncs (event_date, group_id, processed, bank, pockets, storage, pr_bank, pr_pockets, pr_storage, created) VALUES
+('2017-04-25 19:58:00',41,'false',9135199.62,85500,0,4368226.38,111100,0,NOW());
+
+
+INSERT INTO migrations(created, group_id, description) VALUES
+(NOW(),42, 'more data');
+
+-- Trans
+INSERT INTO trans (event_date, value, mode, group_id, category_id, created) VALUES
+('2017-04-26 07:47:34',-2400,'CASH',42,1,NOW()),
+('2017-04-26 08:30:00',-1800,'CASH',42,4,NOW()),
+('2017-04-26 12:31:45',-21600,'CASH',42,6,NOW()),
+('2017-04-26 13:11:00',-5000,'CASH',42,18,NOW()),
+('2017-04-26 17:32:00',-2400,'CASH',42,1,NOW()),
+('2017-04-26 19:54:00',-3500,'CASH',42,7,NOW()),
+('2017-04-26 21:13:00',-8000,'CASH',42,7,NOW()),
+('2017-04-27 07:36:42',-2400,'CASH',42,1,NOW()),
+('2017-04-27 08:18:00',-2100,'CASH',42,4,NOW()),
+('2017-04-27 13:30:00',-15700,'CASH',42,6,NOW()),
+('2017-04-27 14:01:00',-4400,'CASH',42,2,NOW()),
+('2017-04-27 19:06:00',-2400,'CASH',42,1,NOW());
+
+-- Syncs
+INSERT INTO syncs (event_date, group_id, processed, bank, pockets, storage, pr_bank, pr_pockets, pr_storage, created) VALUES
+('2017-04-28 00:05:00',42,'false',9134849.66,17800,0,9135199.62,85500,0,NOW());
+
+
+INSERT INTO migrations(created, group_id, description) VALUES
+(NOW(),43, 'more data');
+
+-- Trans
+INSERT INTO trans (event_date, value, mode, group_id, category_id, created) VALUES
+('2017-04-28 08:23:00',-12000,'CASH',43,19,NOW()),
+('2017-04-28 08:30:00',300000,'DEBIT',43,24,NOW()),
+('2017-04-28 08:41:00',-8500,'CASH',43,4,NOW()),
+('2017-04-28 10:58:00',-2300,'CASH',43,1,NOW()),
+('2017-04-28 14:14:00',-2200,'CASH',43,3,NOW()),
+('2017-04-28 17:57:00',-2400,'CASH',43,1,NOW()),
+('2017-04-28 18:43:00',-21100,'CASH',43,8,NOW());
+
+-- Syncs
+INSERT INTO syncs (event_date, group_id, processed, bank, pockets, storage, pr_bank, pr_pockets, pr_storage, created) VALUES
+('2017-04-28 20:37:00',43,'false',8834874.68,267500,0,9134849.66,17800,0,NOW());
+
+
+
+
+INSERT INTO migrations(created, group_id, description) VALUES
+(NOW(),44, 'more data');
+
+-- Trans
+INSERT INTO trans (event_date, value, mode, group_id, category_id, created) VALUES
+('2017-04-29 07:54:00',-13000,'CASH',44,19,NOW()),
+('2017-04-29 13:07:00',-20900,'DEBIT',44,6,NOW()),
+('2017-04-29 13:53:45',-13700,'CASH',44,2,NOW()),
+('2017-04-29 15:45:00',-2400,'CASH',44,1,NOW()),
+('2017-04-29 16:30:00',-1800,'CASH',44,35,NOW()),
+('2017-04-29 20:00:00',-3500,'CASH',44,35,NOW()),
+('2017-04-30 17:12:00',-14900,'CASH',44,8,NOW()),
+('2017-04-30 18:11:00',-10900,'CASH',44,18,NOW()),
+('2017-05-01 08:37:00',-6200,'CASH',44,4,NOW()),
+('2017-05-01 11:52:00',-2300,'CASH',44,1,NOW()),
+('2017-05-01 15:12:00',-34700,'CASH',44,6,NOW()),
+('2017-05-01 15:14:00',-8100,'CASH',44,2,NOW()),
+('2017-05-01 16:11:00',300000,'DEBIT',44,24,NOW()),
+('2017-05-01 15:00:00',-6000,'CASH',44,19,NOW()),
+('2017-05-01 18:20:00',-150000,'CASH',44,10,NOW());
+
+-- Syncs
+INSERT INTO syncs (event_date, group_id, processed, bank, pockets, storage, pr_bank, pr_pockets, pr_storage, created) VALUES
+('2017-05-02 00:15:00',44,'false',8533747.28,267200,0,8834874.68,267500,0,NOW());
+
+
+INSERT INTO migrations(created, group_id, description) VALUES
+(NOW(),45, 'more data');
+
+-- Categories
+INSERT INTO trans_cat (id, name, group_id, hypercat, created, updated) VALUES
+(35,'Bebida',45,'FOOD',NOW(),NULL);
+
+-- Trans
+INSERT INTO trans (event_date, value, mode, group_id, category_id, created) VALUES
+('2017-05-02 08:03:00',-2400,'CASH',45,1,NOW()),
+('2017-05-02 08:49:00',-2000,'CASH',45,4,NOW()),
+('2017-05-02 17:13:00',-20900,'CASH',45,6,NOW()),
+('2017-05-02 18:01:00',-2400,'CASH',45,1,NOW()),
+('2017-05-02 20:48:00',-3500,'CASH',45,35,NOW());
+
+-- Syncs
+INSERT INTO syncs (event_date, group_id, processed, bank, pockets, storage, pr_bank, pr_pockets, pr_storage, created) VALUES
+('2017-05-02 23:43:00',45,'false',8532570.65,237200,0,8533747.28,267200,0,NOW());
+
+
+INSERT INTO migrations(created, group_id, description) VALUES
+(NOW(),46, 'more data, add salary, update table to include salary');
+
+-- Add Salary
+INSERT INTO trans (event_date, value, mode, group_id, category_id, created) VALUES
+('2017-04-25 11:00:00',4867000.00,'DEBIT',46,30,NOW());
+
+-- Delete calculated day summary
+DELETE FROM daily WHERE day = '2017-04-25';
+
+-- reset record to be calculated.
+UPDATE trans SET pdaily = 'FALSE' WHERE DATE(event_date) = '2017-04-25';
+
+-- Categories
+INSERT INTO trans_cat (id, name, group_id, hypercat, created, updated) VALUES
+(36,'Peluqueria',46,'PURCHASES',NOW(),NULL);
+
+-- Trans
+INSERT INTO trans (event_date, value, mode, group_id, category_id, created) VALUES
+('2017-05-03 08:16:00',-2400,'CASH',46,1,NOW()),
+('2017-05-03 09:00:00',-2000,'CASH',46,4,NOW()),
+('2017-05-03 12:40:00',-9000,'CASH',46,6,NOW()),
+('2017-05-03 19:00:00',-2400,'CASH',46,1,NOW()),
+('2017-05-03 19:25:00',-400,'CASH',46,14,NOW()),
+('2017-05-03 19:30:00',-15000,'CASH',46,17,NOW()),
+('2017-05-03 20:07:00',-9000,'CASH',46,36,NOW()),
+('2017-05-03 20:37:00',-8800,'CASH',46,8,NOW());
+
+-- Syncs
+INSERT INTO syncs (event_date, group_id, processed, bank, pockets, storage, pr_bank, pr_pockets, pr_storage, created) VALUES
+('2017-05-03 21:17:00',46,'false',8532594.02,188200,0,8532570.65,237200,0,NOW());
+
+
+INSERT INTO migrations(created, group_id, description) VALUES
+(NOW(),47, 'more data');
+
+-- Trans
+INSERT INTO trans (event_date, value, mode, group_id, category_id, created) VALUES
+('2017-05-04 07:14:21',-2400,'CASH',47,1,NOW()),
+('2017-05-04 07:55:00',-2100,'CASH',47,4,NOW()),
+('2017-05-04 14:11:33',-15500,'CASH',47,6,NOW()),
+('2017-05-04 15:45:00',-2400,'CASH',47,1,NOW()),
+('2017-05-04 20:36:00',-3500,'CASH',47,35,NOW());
+
+-- Syncs
+INSERT INTO syncs (event_date, group_id, processed, bank, pockets, storage, pr_bank, pr_pockets, pr_storage, created) VALUES
+('2017-05-04 21:50:00',47,'false',8532617.39,162300,0,8532594.02,188200,0,NOW());
+
+
+INSERT INTO migrations(created, group_id, description) VALUES
+(NOW(),48, 'more data');
+
+-- Trans
+INSERT INTO trans (event_date, value, mode, group_id, category_id, created) VALUES
+('2017-05-05 08:36:00',-2400,'CASH',48,1,NOW()),
+('2017-05-05 09:20:00',-2100,'CASH',48,4,NOW()),
+('2017-05-05 13:40:00',-15500,'CASH',48,6,NOW()),
+('2017-05-05 10:46:00',-2400,'CASH',48,1,NOW()),
+('2017-05-05 21:19:41',-27900,'CASH',48,8,NOW()),
+('2017-05-06 17:23:46',-28100,'CASH',48,6,NOW()),
+('2017-05-06 18:16:00',-31850,'CASH',48,10,NOW());
+
+-- Syncs
+INSERT INTO syncs (event_date, group_id, processed, bank, pockets, storage, pr_bank, pr_pockets, pr_storage, created) VALUES
+('2017-05-07 13:50:00',48,'false',8532887.5,52050,0,8532617.39,162300,0,NOW());
+
+
+INSERT INTO migrations(created, group_id, description) VALUES
+(NOW(),49, 'more data');
+
+-- Trans
+INSERT INTO trans (event_date, value, mode, group_id, category_id, created) VALUES
+('2017-05-07 17:02:00',-16900,'CASH',49,8,NOW()),
+('2017-05-07 17:36:47',-5700,'CASH',49,2,NOW()),
+('2017-05-08 08:23:00',-2400,'CASH',49,1,NOW()),
+('2017-05-08 12:59:06',-15500,'CASH',49,6,NOW()),
+('2017-05-08 17:49:00',-2400,'CASH',49,1,NOW()),
+('2017-05-08 19:59:00',-3500,'CASH',49,35,NOW()),
+('2017-05-08 22:00:00',500,'CASH',49,15,NOW());
+
+
+INSERT INTO syncs (event_date, group_id, processed, bank, pockets, storage, pr_bank, pr_pockets, pr_storage, created) VALUES
+('2017-05-08 22:00:00',49,'false',8532710.87,6150,0,8532887.5,52050,0,NOW());
+
+
+INSERT INTO migrations(created, group_id, description) VALUES
+(NOW(),50, 'more data');
+
+-- Trans
+INSERT INTO trans (event_date, value, mode, group_id, category_id, created) VALUES
+('2017-05-09 08:46:32',-2400,'CASH',50,1,NOW()),
+('2017-05-09 09:26:00',-2100,'CASH',50,4,NOW()),
+('2017-05-09 16:52:00',300000,'DEBIT',50,24,NOW()),
+('2017-05-09 16:57:26',-21000,'CASH',50,6,NOW()),
+('2017-05-09 19:21:00',-2400,'CASH',50,1,NOW()),
+('2017-05-09 20:13:00',-16750,'CASH',50,10,NOW());
+
+INSERT INTO syncs (event_date, group_id, processed, bank, pockets, storage, pr_bank, pr_pockets, pr_storage, created) VALUES
+('2017-05-09 20:55:00',50,'false',8232734.24,261500,0,8532710.87,6150,0,NOW());
+
